@@ -16,7 +16,7 @@ if [ $status -eq 200 ]; then
 fi
 
 echo "COUNTRY-3;PIB;COUNTRY-2;ECONOMIC AREA;COUNTRY-3;LANGUAGES;NAME;POPULATION;TLD" > ../countryGDP.csv
-join -t ";" -1 1 -2 2 ../WBGDP.csv ../countryList.csv | cut --delimiter="," -f1,2,3,4,6,7,8,9 >> ../countryGDP.csv 
+join -t ";" -1 1 -2 2 ../WBGDP.csv ../countryList.csv | cut --delimiter=";" -f1,2,3,4,6,7,8,9 >> ../countryGDP.csv 
 
 cd ..
 rm -rf temp
